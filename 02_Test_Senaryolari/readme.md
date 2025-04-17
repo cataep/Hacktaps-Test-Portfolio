@@ -10,7 +10,7 @@ Bu klasör, Hacktaps uygulaması için yapılan manuel test senaryolarını ve t
 
 - `test_senaryolari.md`: Uygulanan test senaryolarının Markdown versiyonu  
 - `test_raporu.docx`: Tüm test süreçlerini içeren resmi Word raporu  
-- `ekran_goruntuleri/` (isteğe bağlı): Testlere ait ekran görüntüleri (şu an boş)
+
 
 ## 🔍 Notlar
 
