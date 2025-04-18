@@ -31,7 +31,7 @@ Bu bölümde test edilen başlıca işlevler şunlardır:
 |-----------|----------|
 | `test_senaryolari.md` | Markdown formatında tüm manuel test senaryolarının listesi |
 | `test_raporu.docx`    | Resmî ve kapsamlı Word raporu (içindekiler, gözlemler, tablo vs.) |
-| `ekran_goruntuleri/` *(isteğe bağlı)* | Test sırasında alınan ekran görüntüleri (şu anda kullanılmıyor) |
+
 
 ---
 
