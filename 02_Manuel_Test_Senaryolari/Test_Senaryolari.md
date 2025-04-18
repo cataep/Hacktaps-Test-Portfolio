@@ -1,24 +1,31 @@
-#  Manuel Test Senaryoları – Hacktaps
+# 🧪 Manuel Test Senaryoları – Hacktaps
 
-Bu dosya, Hacktaps uygulamasında kullanıcı arayüzü üzerinden manuel olarak uygulanan test senaryolarının listesini içermektedir.
-
----
-
-##  Test Özeti
-
-| Test ID | Açıklama | Beklenen Sonuç | Gerçek Sonuç | Durum |
-|---------|----------|----------------|---------------|--------|
-| FT-01 | Tuzaklı Word dosyası oluşturma | Dosya oluşturulmalı | Oluşturuldu | ✅ |
-| FT-02 | Dosya farklı cihazda açıldığında iz bilgisi geliyor mu? | IP ve cihaz bilgisi gelmeli | Geldi | ✅ |
-| FT-03 | Tuzaklı URL oluşturulup tıklanıyor mu? | Veriler izlenmeli | İzleme gerçekleşti | ✅ |
-| NT-01 | Geçersiz dosya (ör. .exe) kullanımı | Sistem reddetmeli | Reddedildi | ✅ |
-| NT-02 | Sistem güncelleme sırasında işlem yapılması | Uyarı verilmeli | Sayfa dondu | ❌ |
-| NT-03 | Şifreli dosya testi | Test uygulanamamalı | Sistem dışı, uygulanamadı | ⛔ |
+Bu dosya, Hacktaps uygulamasında manuel olarak uygulanan test senaryolarını içermektedir.  
+Testler arayüz üzerinden yapılmış ve sızıntı tespit işlevleri gözlemlenmiştir.
 
 ---
 
-##  Notlar
+## 📌 2. TEST SENARYOLARI ve SONUÇLARI
 
-- Tüm testler manuel olarak Hacktaps arayüzü üzerinden gerçekleştirilmiştir.
-- Test sonuçları gözlem yoluyla belgelenmiş, herhangi bir otomasyon ya da API testi kullanılmamıştır.
-- NT-03 numaralı test, sistemin dış kaynaklı dosya kabul etmemesi nedeniyle kapsam dışı bırakılmıştır.
+### 2.1 Fonksiyonel Testler
+
+| Test No | Test Adı | Açıklama | Beklenen Sonuç | Gerçekleşen Sonuç | Durum |
+|---------|----------|----------|----------------|--------------------|--------|
+| 1 | Desteklenen dosya türleri | Uygulamanın ürettiği Word, PDF, QR bait dosyalarının oluşturulması | Dosyalar oluşturulabilmeli | Başarılı | ✅ |
+| 2 | Word bait dosyası linkine erişim | Word bait linkine dış kaynaktan erişim denemesi | IP ve sistem bilgisi kaydedilmeli, alarm oluşturulmalı | Başarılı | ✅ |
+| 3 | PDF bait dosyası linkine erişim | PDF bait linkine dış kaynaktan erişim denemesi | IP ve sistem bilgisi kaydedilmeli, alarm oluşturulmalı | Başarılı | ✅ |
+| 4 | QR Kod ile erişim testi | QR Kod taratılarak linke mobil cihazdan erişildi | IP ve sistem bilgisi kaydedilmeli, alarm oluşturulmalı | Başarılı | ✅ |
+| 5 | Onaylı Bait Silme | "Terminate this bait" butonu ile silme işlemi (onay kutusu işaretli) | Bait silinmeli ve sistemde listelenmemeli | Başarılı | ✅ |
+| 6 | Onaysız Bait Silme | Onay kutusu işaretlenmeden silme butonuna tıklanması | Bait silinmemeli ve sistemde listelenmeli | Başarılı | ✅ |
+| 7 | İzleme Doğruluğu Testi | IP adresi ve konum bilgisinin haritada gösterimi (Test ortamı: Samsung Galaxy A35 5G) | Konum doğru gösterilmeli | Başarısız (Konum yanlış) | ❌ |
+
+---
+
+## 📝 Gözlemler ve Öneriler
+
+- Uygulama tarafından üretilen bait türlerinin tamamı sorunsuz çalışmaktadır.  
+- Silme fonksiyonu hem onaylı hem onaysız olarak beklenen şekilde işlemektedir.  
+- IP bilgisi izlenebilir durumda olsa da, **konum haritası yanlış sonuç verebilmektedir**.
+
+🔧 **Öneri:**  
+Konum doğruluğunun artırılması için IP verisinin daha güncel bir coğrafi veri tabanıyla eşleştirilmesi önerilmektedir.
