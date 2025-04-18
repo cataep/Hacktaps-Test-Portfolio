@@ -1,8 +1,3 @@
-📄 test_senaryolari.md – İçerik Taslağı
-Yapılan tüm testleri madde madde, tablo şeklinde bu dosyada toplayacağız. Bu, test_raporu.docx'in özet versiyonu olacak.
-
-markdown
-Copy
 # 🧪 Test Senaryoları
 
 Hacktaps uygulaması için uygulanan test senaryoları aşağıdaki gibidir:
