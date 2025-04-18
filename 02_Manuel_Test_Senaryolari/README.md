@@ -20,7 +20,7 @@ Bu bölümde test edilen başlıca işlevler şunlardır:
 - Oluşturulan dosyanın farklı cihazlarda açılması
 - Kullanıcının IP ve cihaz bilgilerinin Hacktaps tarafından izlenmesi
 - QR kod ve URL takibi
-- Şifreli ve geçersiz dosyaların sistem tarafından nasıl ele alındığı
+- Şifreli ve geçersiz dosyaların sistem tarafından nasıl ele alındığı (Not: Hacktaps uygulaması sadece sistemin kendi oluşturduğu dosyalar üzerinden çalıştığı için harici dosya yüklemeye dayalı negatif senaryolar bu çalışmada kapsam dışı bırakılmıştır.)
 - Sistem güncellemesi sırasında işlem yapılmaya çalışılması
 
 ---
