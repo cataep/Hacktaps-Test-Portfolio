@@ -1,6 +1,12 @@
 # 02_Manuel Test_Senaryolari
 
-Bu klasör, Hacktaps uygulaması için yapılan manuel test senaryolarını ve test raporunu içerir.
+Bu klasör, Hacktaps uygulamasında kullanıcı arayüzü üzerinden manuel olarak uygulanan test senaryolarını içermektedir.
+
+Test Türleri:
+- Fonksiyonel Testler (dosya oluşturma, izleme)
+- Negatif Testler (geçersiz dosya, sistem güncelleme sırasında işlem)
+
+Testler manuel olarak yürütülmüş, otomasyon veya API test araçları kullanılmamıştır.
 
 | 📂 Klasör | 🧪 Test Türü | 🔧 Test Yöntemi | 📄 İçerik |
 |-----------|--------------|------------------|----------|
