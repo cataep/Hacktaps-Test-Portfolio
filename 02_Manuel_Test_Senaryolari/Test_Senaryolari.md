@@ -1,11 +1,11 @@
-# 🧪 Manuel Test Senaryoları – Hacktaps
+#  Manuel Test Senaryoları – Hacktaps
 
 Bu dosya, Hacktaps uygulamasında manuel olarak uygulanan test senaryolarını içermektedir.  
 Testler arayüz üzerinden yapılmış ve sızıntı tespit işlevleri gözlemlenmiştir.
 
 ---
 
-## 📌 2. TEST SENARYOLARI ve SONUÇLARI
+##  2. TEST SENARYOLARI ve SONUÇLARI
 
 ### 2.1 Fonksiyonel Testler
 
@@ -21,7 +21,7 @@ Testler arayüz üzerinden yapılmış ve sızıntı tespit işlevleri gözlemle
 
 ---
 
-## 📝 Gözlemler ve Öneriler
+##  Gözlemler ve Öneriler
 
 - Uygulama tarafından üretilen bait türlerinin tamamı sorunsuz çalışmaktadır.  
 - Silme fonksiyonu hem onaylı hem onaysız olarak beklenen şekilde işlemektedir.  
