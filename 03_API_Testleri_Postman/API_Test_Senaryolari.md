@@ -8,7 +8,7 @@ Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirile
 
 | Test No | Test Adı | Açıklama | API Yöntemi | Beklenen Sonuç | Gerçekleşen Sonuç | Durum |
 |---------|----------|----------|-------------|----------------|--------------------|--------|
-| 1 | Bait Oluşturma | Kullanıcının bait oluşturma işlemi sırasında, 'alarmuse/' API’sine POST isteği gönderildi| POST | 200 OK | 200 OK | ✅ |
+| 1 | Bait Oluşturma | Kullanıcının bait oluşturma işlemi sırasında, 'triggers/' API’sine POST isteği gönderildi| POST | 200 OK | 200 OK | ✅ |
 | 2 | PDF Dosya Linkine GET Çağrısı | Oluşturulan bait PDF linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | 3 | Word Dosya Linkine GET Çağrısı | Oluşturulan bait Word linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | 4 | QR Kod Linkine GET Çağrısı | Oluşturulan QR bait linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
