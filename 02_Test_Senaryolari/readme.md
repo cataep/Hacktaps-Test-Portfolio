@@ -1,4 +1,4 @@
-# 02_Test_Senaryolari/
+# 02_Manuel Test_Senaryolari
 
 Bu klasör, Hacktaps uygulaması için yapılan manuel test senaryolarını ve test raporunu içerir.
 
