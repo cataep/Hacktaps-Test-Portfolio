@@ -1,42 +1,42 @@
 #  02_Manuel_Test_Senaryolari
 
-Bu klasör, Hacktaps sızıntı tespiti uygulamasının manuel olarak test edildiği senaryoları ve test raporlarını içermektedir. Tüm testler kullanıcı arayüzü (UI) üzerinden uygulanmış, herhangi bir otomasyon veya API testi yapılmamıştır.
+Bu klasör, Hacktaps uygulamasında kullanıcı arayüzü üzerinden manuel olarak gerçekleştirilmiş test senaryolarını ve sonuçlarını içermektedir.
+
+Testler, uygulamanın sızıntı tespiti işlevlerini doğrulamak amacıyla farklı bait türleri (Word, PDF, QR) ve erişim yolları kullanılarak uygulanmıştır.  
+Tüm testler manuel olarak yürütülmüş, otomasyon veya API aracı kullanılmamıştır.
 
 ---
 
-## 📌 Genel Bilgi
+##  Klasör Özeti
 
-| 📂 Klasör | 🧪 Test Türü | 🔧 Test Yöntemi | 📄 İçerik |
+|  Klasör |  Test Türü |  Test Yöntemi |  İçerik |
 |-----------|--------------|------------------|----------|
-| 02_Manuel_Test_Senaryolari/ | Fonksiyonel, Negatif | Manuel, kullanıcı arayüzü üzerinden | Dosya oluşturma, link izleme, geçersiz dosya senaryoları |
+| 02_Manuel_Test_Senaryolari/ | Fonksiyonel, Negatif | Manuel test (kullanıcı arayüzü üzerinden) | Bait oluşturma, erişim testleri, silme fonksiyonu, izleme doğruluğu |
 
 ---
 
-## 🧪 Uygulanan Testler
-
-Bu bölümde test edilen başlıca işlevler şunlardır:
-
-- Tuzaklı dosya (Word/HTML) oluşturulması
-- Oluşturulan dosyanın farklı cihazlarda açılması
-- Kullanıcının IP ve cihaz bilgilerinin Hacktaps tarafından izlenmesi
-- QR kod ve URL takibi
-- Şifreli ve geçersiz dosyaların sistem tarafından nasıl ele alındığı (Not: Hacktaps uygulaması sadece sistemin kendi oluşturduğu dosyalar üzerinden çalıştığı için harici dosya yüklemeye dayalı negatif senaryolar bu çalışmada kapsam dışı bırakılmıştır.)
-- Sistem güncellemesi sırasında işlem yapılmaya çalışılması
-
----
-
-## 📄 İçerikler
+##  Klasör İçeriği
 
 | Dosya Adı | Açıklama |
 |-----------|----------|
-| `test_senaryolari.md` | Markdown formatında tüm manuel test senaryolarının listesi |
-| `test_raporu.docx`    | Resmî ve kapsamlı Word raporu (içindekiler, gözlemler, tablo vs.) |
+| `Test_Senaryolari.md` | Markdown formatında tüm manuel test senaryoları ve sonuçları |
+| `manuel_test_raporu` | Tüm senaryoları içeren kapsamlı Word formatlı test raporu |
 
 
 ---
 
-## 🧭 Test Yöntemi
+## Uygulanan Testler
 
-- Tüm testler, kullanıcı gibi davranılarak, Hacktaps arayüzü üzerinden manuel olarak gerçekleştirilmiştir.
-- Her testte beklenen ve gerçek sonuçlar ayrı ayrı değerlendirilmiş, test sonuçları raporda tablo olarak sunulmuştur.
-- Otomasyon ve API testleri bu bölümün dışında tutulmuş, ayrı klasörlerde ele alınacaktır.
+- Word, PDF ve QR formatında bait dosyalarının oluşturulması
+- Bu dosyalara farklı cihaz ve bağlantılarla erişilerek sistemin izleme davranışının test edilmesi
+- Bait silme fonksiyonunun onaylı/onaysız davranışlarının test edilmesi
+- IP adresine göre konum bilgisinin haritada doğru gösterilip gösterilmediğinin test edilmesi
+
+---
+
+##  Notlar
+
+- Tüm testler manuel olarak, doğrudan Hacktaps arayüzü üzerinden gerçekleştirilmiştir.
+- Bu bölümde **otomasyon, API ya da performans testi** yer almamaktadır.
+- Uygulamanın harita üzerindeki IP-konum eşlemesi hatalı sonuç vermiştir. Bu test başarısız olarak işaretlenmiştir.
+
