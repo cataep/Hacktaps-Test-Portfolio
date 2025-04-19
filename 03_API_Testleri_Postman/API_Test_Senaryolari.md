@@ -10,7 +10,7 @@ Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirile
 |---------|----------|----------|-------------|----------------|--------------------|--------|
 | TC01 | Yeni Bait Oluşturma | Kullanıcı, bait ismi girerek form aracılığıyla bait oluşturduğunda, sistem POST /en/triggers/ endpointini kullanarak kaydı tamamlar.| POST | 302 FOUND | 302 FOUND | ✅ |
 | TC02 | PDF Dosya Linkine GET Çağrısı | Oluşturulan bait PDF linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
-| 3 | Word Dosya Linkine GET Çağrısı | Oluşturulan bait Word linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
+| TC03 | Word Dosya Linkine GET Çağrısı | Oluşturulan bait Word linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | 4 | QR Kod Linkine GET Çağrısı | Oluşturulan QR bait linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | 5 | Silinmiş Dosya Linkine Erişim | Terminate edilen bait dosyasının linkine GET çağrısı yapılması | GET | 404 Not Found | 404 Not Found | ✅ |
 | 6 | Boş POST İsteği | `alarmuse/` endpointine body’siz POST isteği gönderildi | POST | 400 Bad Request | 400 Bad Request | ✅ |
