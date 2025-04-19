@@ -12,7 +12,7 @@ Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirile
 | TC02 | PDF Dosya Linkine GET Çağrısı | Oluşturulan bait PDF linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | TC03 | Word Dosya Linkine GET Çağrısı | Oluşturulan bait Word linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | TC04 | QR Kod Linkine GET Çağrısı | Oluşturulan QR bait linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
-| TC05 | Silinmiş Dosya Linkine Erişim | Terminate edilen bait dosyasının linkine GET çağrısı yapılması | GET | 404 Not Found | 200 OK | ✅ |
+| TC05 | Silinmiş Dosya Linkine Erişim | Terminate edilen bait dosyasının linkine GET çağrısı yapılması | GET | 404 Not Found | 200 OK |  |
 | 6 | Boş POST İsteği | `alarmuse/` endpointine body’siz POST isteği gönderildi | POST | 400 Bad Request | 400 Bad Request | ✅ |
 | 7 | Sahte Header ile GET | GET isteğine özel User-Agent eklendi | GET | 200 OK (beklenen), davranış gözlemlenir | 200 OK | ✅ |
 
