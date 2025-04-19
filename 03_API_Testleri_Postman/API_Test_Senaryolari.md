@@ -47,4 +47,7 @@ Dosya içeriğine erişim amaçlıysa: Ayar açık bırakılmış ve nihai 200 O
 - **TC02-TC03-TC04** testleri sırasında sistem, bait erişimini başarıyla algılamış ve **Alert Count** + **New Alert** alanlarında uyarı göstermiştir.
 - Bu durum, sistemin alarm tetikleme ve izleme mekanizmasının **doğru çalıştığını pasif olarak doğrulamaktadır**.
 
+ ### 🛑 TC05-Önemli Güvenlik Notu:
+ Bait terminate edildikten sonra bağlantıya erişim hâlâ sağlanabilmektedir. Bu, uygulamanın dosya erişim yetkilendirmesi veya silme sonrası kaynak temizliği mekanizmalarının eksik olduğunu gösterebilir. Güvenlik açığı olarak değerlendirilebilir.
+
 
