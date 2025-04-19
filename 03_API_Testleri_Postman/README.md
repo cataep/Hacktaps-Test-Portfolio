@@ -1,21 +1,21 @@
-#  03_API_Testleri_Postman
+# 03_API_Testleri_Postman
 
 Bu klasör, Hacktaps uygulamasına yönelik olarak Postman kullanılarak gerçekleştirilen API testlerini içermektedir.
 
 Testler, uygulamanın alarm bildirim endpoint'i (`alarmuse/`) ve bait dosyalarına ait bağlantıların (`PDF`, `Word`, `QR`) erişilebilirliğini ölçmek amacıyla yapılmıştır.  
-Ayrıca hata durumları ve sistemin yanıt davranışları da gözlemlenmiştir.
+Ayrıca hata durumları, sistemin yanıt davranışları ve CSRF koruma mekanizması da gözlemlenmiştir.
 
 ---
 
-##  Klasör Özeti
+## Klasör Özeti
 
-|  Klasör | Test Türü |  Test Yöntemi |  İçerik |
+| Klasör | Test Türü | Test Yöntemi | İçerik |
 |-----------|--------------|------------------|----------|
-| 03_API_Testleri_Postman/ | API Testi | Postman ile manuel istekler | alarmuse/ POST, bait linklerine GET, hata senaryoları |
+| 03_API_Testleri_Postman/ | API Testi | Postman ile manuel istekler | alarmuse/ POST, bait linklerine GET, hata senaryoları, CSRF gözlemi |
 
 ---
 
-##  Klasör İçeriği
+## Klasör İçeriği
 
 | Dosya Adı | Açıklama |
 |-----------|----------|
@@ -25,18 +25,22 @@ Ayrıca hata durumları ve sistemin yanıt davranışları da gözlemlenmiştir.
 
 ---
 
-##  Uygulanan Testler
+## Uygulanan Testler
 
 - `alarmuse/` endpointine POST isteği gönderildi
 - Bait PDF, Word ve QR bağlantılarına GET ile erişim testleri yapıldı
 - Silinmiş bait bağlantısına yapılan erişimde 404 yanıtı alındı
 - Body’siz POST isteği ile sistemin hata yanıtı verdiği gözlemlendi
 - Sahte User-Agent header’ı ile yapılan GET çağrısı test edildi
+- CSRF koruma mekanizmasının aktif olduğu gözlemlendi: `csrftoken` ile `csrfmiddlewaretoken` eşleşmezse 403 Forbidden döndü
+- Postman’in kendi Cookies sekmesinden gönderdiği token ile manuel girilen token çakışırsa istek başarısız oluyor
 
 ---
 
-##  Notlar
+## Notlar
 
 - Testler yalnızca `GET` ve `POST` metodlarını kapsar.  
 - PUT/DELETE gibi metodlar veya dosya yüklemeleri uygulama yapısında desteklenmediğinden kapsam dışıdır.
 - Tüm testler Postman üzerinden **manuel olarak** gerçekleştirilmiştir.
+- CSRF gözlemi sırasında, sistemin token uyumsuzluğuna karşı 403 dönmesi güvenlik açısından olumlu değerlendirilmiştir.
+
