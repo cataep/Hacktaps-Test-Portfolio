@@ -50,4 +50,12 @@ Dosya içeriğine erişim amaçlıysa: Ayar açık bırakılmış ve nihai 200 O
  ### 🛑 TC05-Önemli Güvenlik Notu:
  Bait terminate edildikten sonra bağlantıya erişim hâlâ sağlanabilmektedir. Bu, uygulamanın dosya erişim yetkilendirmesi veya silme sonrası kaynak temizliği mekanizmalarının eksik olduğunu gösterebilir. Güvenlik açığı olarak değerlendirilebilir.
 
+ ### TC06 Test Notu:
+
+İlk denemede body tamamen boş bırakıldığında ve CSRF token da eksik olduğunda, sistem 403 Forbidden yanıtı vermiştir. Bu, güvenlik kontrolünün CSRF öncelikli olduğunu göstermektedir.
+
+İkinci denemede geçerli bir csrfmiddlewaretoken gönderilmiş fakat body’de zorunlu alanlar (desc_text, submit vb.) eksik bırakılmıştır. Buna rağmen sistem 200 OK yanıtı vermiştir.
+
+Bu durum, form doğrulamasının (validation) eksik olabileceğini veya yalnızca frontend seviyesinde kontrol yapıldığını göstermektedir.
+
 
