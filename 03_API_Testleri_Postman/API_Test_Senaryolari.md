@@ -9,9 +9,9 @@ Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirile
 | Test No | Test Adı | Açıklama | API Yöntemi | Beklenen Sonuç | Gerçekleşen Sonuç | Durum |
 |---------|----------|----------|-------------|----------------|--------------------|--------|
 | TC01 | Yeni Bait Oluşturma | Kullanıcı, bait ismi girerek form aracılığıyla bait oluşturduğunda, sistem POST /en/triggers/ endpointini kullanarak kaydı tamamlar.| POST | 302 FOUND | 302 FOUND | ✅ |
-| TC02 | PDF Dosya Linkine GET Çağrısı | Oluşturulan bait PDF linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
-| TC03 | Word Dosya Linkine GET Çağrısı | Oluşturulan bait Word linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
-| TC04 | QR Kod Linkine GET Çağrısı | Oluşturulan QR bait linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
+| TC02 | PDF Dosya Linkine GET Çağrısı | Oluşturulan bait PDF linkine GET ile erişim | GET | 200 OK ve alarm oluşması | 200 OK,sistem alarm tetikledi | ✅ |
+| TC03 | Word Dosya Linkine GET Çağrısı | Oluşturulan bait Word linkine GET ile erişim | GET | 200 OK ve alarm oluşması | 200 OK,sistem alarm tetikledi | ✅ |
+| TC04 | QR Kod Linkine GET Çağrısı | Oluşturulan QR bait linkine GET ile erişim | GET | 200 OK ve alarm oluşması | 200 OK,sistem alarm tetikledi| ✅ |
 | TC05 | Silinmiş Dosya Linkine Erişim | Terminate edilen bait dosyasının linkine GET çağrısı yapılması | GET | 404 Not Found | 200 OK | ⚠️ |
 | TC06 | Boş POST İsteği | `triggers/` endpointine body’siz POST isteği gönderildi | POST | 400 Bad Request | 200 OK | ⚠️ |
 | 7 | Sahte Header ile GET | GET isteğine özel User-Agent eklendi | GET | 200 OK (beklenen), davranış gözlemlenir | 200 OK | ✅ |
