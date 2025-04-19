@@ -43,4 +43,10 @@ Ayrıca hata durumları, sistemin yanıt davranışları ve CSRF koruma mekanizm
 - PUT/DELETE gibi metodlar veya dosya yüklemeleri uygulama yapısında desteklenmediğinden kapsam dışıdır.
 - Tüm testler Postman üzerinden **manuel olarak** gerçekleştirilmiştir.
 - CSRF gözlemi sırasında, sistemin token uyumsuzluğuna karşı 403 dönmesi güvenlik açısından olumlu değerlendirilmiştir.
+- ### 🔍 Ek Gözlem:
+
+- GET ile erişilen bait bağlantılarında sistemin izleme mekanizması tetiklenmiştir.
+- `TC02-TC03-TC04` gibi baitlerde, sistem **alarm count** ve **alert icon** bilgilerini güncellemiştir.
+- Bu testler, uygulamanın **pasif saldırı algılama mekanizmasının da işlediğini göstermektedir.**
+
 
