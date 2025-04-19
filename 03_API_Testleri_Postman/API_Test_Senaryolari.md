@@ -25,6 +25,14 @@ Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirile
 - Hata mesajında görülen gerçek `csrftoken` değeri hem Cookie hem de Body'de eşleştirildiğinde sistem 302 FOUND ile başarılı yanıt verdi.
 - Bu test, uygulamanın aktif CSRF korumasına sahip olduğunu ve sahte ya da uyumsuz token'lı isteklere karşı etkili olduğunu göstermektedir.
 
+  Test Stratejisi Notu
+
+Yönlendirme (302 Found) içeren linklerde Postman’in "Automatically follow redirects" ayarı duruma göre değiştirilmiştir.
+
+Redirect davranışı gözlemlenecekse: Ayar kapatılmıştır. Böylece doğrudan 302 yanıtı analiz edilmiştir.
+
+Dosya içeriğine erişim amaçlıysa: Ayar açık bırakılmış ve nihai 200 OK yanıtı alınması hedeflenmiştir.
+
 ---
 
 ## Notlar
