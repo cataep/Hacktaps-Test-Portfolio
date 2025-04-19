@@ -48,5 +48,6 @@ Ayrıca hata durumları, sistemin yanıt davranışları ve CSRF koruma mekanizm
 - GET ile erişilen bait bağlantılarında sistemin izleme mekanizması tetiklenmiştir.
 - `TC02-TC03-TC04` gibi baitlerde, sistem **alarm count** ve **alert icon** bilgilerini güncellemiştir.
 - Bu testler, uygulamanın **pasif saldırı algılama mekanizmasının da işlediğini göstermektedir.**
+- `TC05` testinde Bait terminate edildikten sonra bağlantıya erişim hâlâ sağlanabilmektedir. Bu, uygulamanın dosya erişim yetkilendirmesi veya silme sonrası kaynak temizliği mekanizmalarının eksik olduğunu gösterebilir. Güvenlik açığı olarak değerlendirilebilir.
 
 
