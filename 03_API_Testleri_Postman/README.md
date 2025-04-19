@@ -35,7 +35,9 @@ Ayrıca hata durumları, sistemin yanıt davranışları ve CSRF koruma mekanizm
 - CSRF koruma mekanizmasının aktif olduğu gözlemlendi: `csrftoken` ile `csrfmiddlewaretoken` eşleşmezse 403 Forbidden döndü
 - Postman’in kendi Cookies sekmesinden gönderdiği token ile manuel girilen token çakışırsa istek başarısız oluyor
 - Sahte bir User-Agent başlığıyla yapılan GET çağrısına sistem erişim izni verdi  (TC07)
-  (bu durum, sistemde User-Agent tabanlı erişim sınırlaması olmadığını gösterir)
+  Bu durum, sistemde User-Agent tabanlı erişim sınırlaması olmadığını gösterir.Erişim açık sistemlerde bu durum kabul edilebilir olsa da, 
+  güvenlik odaklı yapılarda izleme faydalı olabilir.Ancak bu durum Hacktaps sisteminin avlama ve izleme yaklaşımıyla uyumludur; 
+  kullanıcıyı filtrelemek yerine davranışı kaydetme önceliklidir.
 
 
 ---
