@@ -27,13 +27,13 @@ Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirile
 
  ## Test Stratejisi Notu
 
-Yönlendirme (302 Found) içeren linklerde Postman’in "Automatically follow redirects" ayarı duruma göre değiştirilmiştir.
+-Yönlendirme (302 Found) içeren linklerde Postman’in "Automatically follow redirects" ayarı duruma göre değiştirilmiştir.
 
 Redirect davranışı gözlemlenecekse: Ayar kapatılmıştır. Böylece doğrudan 302 yanıtı analiz edilmiştir.
 
 Dosya içeriğine erişim amaçlıysa: Ayar açık bırakılmış ve nihai 200 OK yanıtı alınması hedeflenmiştir.
 
-Kullanıcı tarafından sahte bir User-Agent bilgisi ile yapılan GET isteği (TC07) sistem tarafından normal karşılanmış ve erişim engellenmemiştir. Bu durum, sistemin bu tür istemci tanımlarına karşı özel bir kısıtlama mekanizması olmadığını gösterir. Bu davranış hem pozitif bir erişim doğrulaması hem de güvenlik denetimi açısından referans kabul edilebilir.
+-Kullanıcı tarafından sahte bir User-Agent bilgisi ile yapılan GET isteği (TC07) sistem tarafından normal karşılanmış ve erişim engellenmemiştir. Bu durum, sistemin bu tür istemci tanımlarına karşı özel bir kısıtlama mekanizması olmadığını gösterir. Bu davranış hem pozitif bir erişim doğrulaması hem de güvenlik denetimi açısından referans kabul edilebilir.
 
 
 
