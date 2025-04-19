@@ -40,4 +40,11 @@ Dosya içeriğine erişim amaçlıysa: Ayar açık bırakılmış ve nihai 200 O
 - API testleri sadece `GET` ve `POST` yöntemleri üzerinden yapılmıştır.
 - Dış kaynaklı dosya yükleme gibi işlemler uygulama tarafından desteklenmediği için kapsam dışı bırakılmıştır.
 - Tüm testler Postman uygulaması kullanılarak manuel olarak uygulanmıştır.
+- ---
+
+### 🔍 Test Notu:
+
+- **TC02-TC03-TC04** testleri sırasında sistem, bait erişimini başarıyla algılamış ve **Alert Count** + **New Alert** alanlarında uyarı göstermiştir.
+- Bu durum, sistemin alarm tetikleme ve izleme mekanizmasının **doğru çalıştığını pasif olarak doğrulamaktadır**.
+
 
