@@ -1,14 +1,14 @@
-#  API Test Senaryoları – Postman
+# API Test Senaryoları – Postman
 
 Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirilen API test senaryolarını içermektedir.
 
 ---
 
-## API Testleri 
+## API Testleri
 
 | Test No | Test Adı | Açıklama | API Yöntemi | Beklenen Sonuç | Gerçekleşen Sonuç | Durum |
 |---------|----------|----------|-------------|----------------|--------------------|--------|
-| 1 | Yeni Bait Oluşturma | 	Kullanıcı, bait ismi girerek form aracılığıyla bait oluşturduğunda, sistem POST /en/triggers/ endpointini kullanarak kaydı tamamlar.| POST | 302 FOUND | 302 FOUND | ✅ |
+| 1 | Yeni Bait Oluşturma | Kullanıcı, bait ismi girerek form aracılığıyla bait oluşturduğunda, sistem POST /en/triggers/ endpointini kullanarak kaydı tamamlar.| POST | 302 FOUND | 302 FOUND | ✅ |
 | 2 | PDF Dosya Linkine GET Çağrısı | Oluşturulan bait PDF linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | 3 | Word Dosya Linkine GET Çağrısı | Oluşturulan bait Word linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
 | 4 | QR Kod Linkine GET Çağrısı | Oluşturulan QR bait linkine GET ile erişim | GET | 200 OK | 200 OK | ✅ |
@@ -18,8 +18,18 @@ Bu dosya, Postman kullanılarak Hacktaps uygulaması üzerinde gerçekleştirile
 
 ---
 
-##  Notlar
+## 🔐 Ek Gözlem: CSRF Token Uyumsuzluğu ve Güvenlik Davranışı
+
+- Repeater ile elde edilen geçerli CSRF token'lar (`csrftoken` ve `csrfmiddlewaretoken`) Postman'de kullanıldığında 403 Forbidden yanıtı alındı.
+- Postman’in kendi Cookies sekmesinden gönderdiği token değerleri, manuel girilenlerle çakıştığı için bu hata oluştu.
+- Hata mesajında görülen gerçek `csrftoken` değeri hem Cookie hem de Body'de eşleştirildiğinde sistem 302 FOUND ile başarılı yanıt verdi.
+- Bu test, uygulamanın aktif CSRF korumasına sahip olduğunu ve sahte ya da uyumsuz token'lı isteklere karşı etkili olduğunu göstermektedir.
+
+---
+
+## Notlar
 
 - API testleri sadece `GET` ve `POST` yöntemleri üzerinden yapılmıştır.
 - Dış kaynaklı dosya yükleme gibi işlemler uygulama tarafından desteklenmediği için kapsam dışı bırakılmıştır.
 - Tüm testler Postman uygulaması kullanılarak manuel olarak uygulanmıştır.
+
