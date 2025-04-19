@@ -34,6 +34,9 @@ Ayrıca hata durumları, sistemin yanıt davranışları ve CSRF koruma mekanizm
 - Sahte User-Agent header’ı ile yapılan GET çağrısı test edildi
 - CSRF koruma mekanizmasının aktif olduğu gözlemlendi: `csrftoken` ile `csrfmiddlewaretoken` eşleşmezse 403 Forbidden döndü
 - Postman’in kendi Cookies sekmesinden gönderdiği token ile manuel girilen token çakışırsa istek başarısız oluyor
+- Sahte bir User-Agent başlığıyla yapılan GET çağrısına sistem erişim izni verdi  (TC07)
+  (bu durum, sistemde User-Agent tabanlı erişim sınırlaması olmadığını gösterir)
+
 
 ---
 
